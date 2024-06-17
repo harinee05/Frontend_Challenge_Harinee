@@ -1,38 +1,92 @@
-.App {
-  text-align: center;
-}
+/* App.css */
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header {
   display: flex;
+  align-items: baseline;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.header input[type="text"] {
+  position: relative;
+  width: 400px;
+  font-size: small;
+  height: 30px;
+  padding-left: 10px;
+  border: 1px solid #777777;
+}
+
+.autocomplete-container {
+  display: flex;
+  gap: 5px;
+  padding: 8px;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  max-height: max-content;
 }
 
-.App-link {
-  color: #61dafb;
+.autocomplete-dropdown {
+  border: 1px solid #646363;
+  font-size: small;
+  position: relative;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.autocomplete-item {
+  padding: 10px;
+  flex-direction: column;
 }
+
+.genre_title {
+  float: right;
+  color: #8a8989;
+}
+
+.dropdowns {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-evenly;
+  gap: 10px;
+}
+
+.dropdown {
+  position: relative;
+  font-size: small;
+
+
+}
+
+.dropdown button {
+  background-color: #ffffff;
+  border: 1px solid #777777;
+  padding: 10px;
+  font-size: small;
+  width: 93px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-around;
+}
+
+.dropdown button:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  border: 1px solid #646363;
+  z-index: 1;
+  padding: 10px;
+  max-height: 200px;
+  max-width: 210px;
+  margin-top: 5px;
+}
+
+.dropdown-content.show {
+  display: block;
+}
+
+.dropdown-content label {
+  display: flex;
+  width: fit-content;
+  gap: 10px;
+}
+
