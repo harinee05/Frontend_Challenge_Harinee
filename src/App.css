@@ -61,7 +61,7 @@
   width: 93px;
   cursor: pointer;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .dropdown button:hover {
@@ -81,7 +81,10 @@
 }
 
 .dropdown-content.show {
-  display: block;
+  display: flex;
+  width: max-content;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .dropdown-content label {

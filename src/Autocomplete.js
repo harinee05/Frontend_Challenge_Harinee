@@ -33,25 +33,19 @@ const Autocomplete = ({ movies, searchTerm, selectedRatings, selectedGenres }) =
 
   return (
     <div className="autocomplete-dropdown">
-      {filteredMovies.length > 0 ? (
-        filteredMovies.map((movie) => (
-          <div key={movie.id} className="autocomplete-item">
-            <div className="genre_title">
-              <span>{movie.genre}</span>
-            </div>
-            <div className="movie_title">
-              <span>{movie.title}</span>
-            </div>
-            <div>
-              <StyledRating value={movie.rating} readOnly max={10} precision={0.5} size="small" />
-            </div>
+      {filteredMovies.length > 0 && filteredMovies.map((movie) => (
+        <div key={movie.id} className="autocomplete-item">
+          <div className='genre_title'>
+            <span>{movie.genre}</span>
           </div>
-        ))
-      ) : (
-        <div className="autocomplete-item">
-          {searchTerm.length > 0 ? 'No results found' : 'Showing all movies'}
+          <div className='movie_title'>
+            <span>{movie.title}</span>
+          </div>
+          <div>
+            <StyledRating value={movie.rating} readOnly max={10} precision={0.5} size="small" />
+          </div>
         </div>
-      )}
+      ))}
     </div>
   );
 };
